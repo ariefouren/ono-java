@@ -11,11 +11,11 @@ public class FV {
 		System.out.print("Enter the investment amount :");
 		double pv = in.nextDouble();
 
-		System.out.print("Enter the MEAN of the monthly interest rate :");
-		double meanRate = in.nextDouble();
+		System.out.print("Enter the MEAN of the monthly interest rate (in %):");
+		double meanRate = in.nextDouble()/100;
 		
-		System.out.print("Enter the STDEV of the monthly interest rate :");
-		double stdevRate = in.nextDouble();
+		System.out.print("Enter the STDEV of the monthly interest rate (in %):");
+		double stdevRate = in.nextDouble()/100;
 		
 		System.out.print("Enter the number of months :");
 		int nper = in.nextInt();
@@ -26,14 +26,25 @@ public class FV {
 		fv[0] = pv;
 		for(int i = 1; i <= nper; i++)
 		{
-			double rate = 0.01; //r = 1%
+			double rate = rand.nextGaussian(meanRate, stdevRate);
 			fv[i] = fv[i-1]*(1 + rate);
-			System.out.printf("i = %7d  fv = %7.2f\n", i, fv[i]);
+		}
+	
+		// output
+		for(int i = 0; i <= nper; i++)
+		{
+			System.out.printf("%7d | %7.2f\n", i, fv[i]);
+		}
+	
+		// graphic output
+		StdDraw.setXscale(0, nper);
+		StdDraw.setYscale(0, fv[nper]);
+		StdDraw.setPenColor(StdDraw.RED);
+		for(int i = 0; i < nper; i++)
+		{
+			 StdDraw.line(i, fv[i], i+1, fv[i+1]);
 		}
 		
-		
-		// output
-
 	}
 
 }
