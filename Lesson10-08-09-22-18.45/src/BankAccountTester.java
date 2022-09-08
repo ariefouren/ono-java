@@ -16,7 +16,7 @@ public class BankAccountTester {
 		aliceAccount.withdraw(amount);
 		bobAccount.deposit(amount);
 		System.out.println(aliceAccount.toString());
-		System.out.println(bobAccount.toString());
+		System.out.println(bobAccount.toString()); ////
 	
 	}
 
