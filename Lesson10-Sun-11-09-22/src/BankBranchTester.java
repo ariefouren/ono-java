@@ -8,8 +8,8 @@ public class BankBranchTester {
 		BankAccount alicesAccount = new BankAccount(10000, 1001, "Alice");
 		BankAccount bobsAccount = new BankAccount(1002, "Bob");
 		
-		branchJerusalem987.addAccount(aliceAccount);
-		branchJerusalem987.addAccount(bobAccount);
+		branchJerusalem987.addAccount(alicesAccount);
+		branchJerusalem987.addAccount(bobsAccount);
 
 	}
 

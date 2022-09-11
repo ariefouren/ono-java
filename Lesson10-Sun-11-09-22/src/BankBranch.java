@@ -13,6 +13,17 @@ public class BankBranch {
 		accounts.add(a); 
 	}
 	
+	public double totalBalance()
+	{
+		double total = 0;
+		for(BankAccount a: accounts)
+		{
+			total += a.getBalance();
+		}
+		
+		return total;
+		
+	}
 	
 	
 
