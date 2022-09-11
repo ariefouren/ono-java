@@ -27,10 +27,19 @@ public class BankBranch {
 	public String toString()
 	{
 		String str = "";
+		str += "-----------------------------------------------------------------------------\n";
+		str += branchName + "\n"; 
+		str += "-----------------------------------------------------------------------------\n";
 		for(BankAccount a: accounts)
 		{
 			str += a.toString() + "\n";
 		}
+		str += "-----------------------------------------------------------------------------\n";
+		str += String.format("Number of accounts :     %10d\n", accounts.size());
+		str += String.format("Total balance      :     %10.2f\n", totalBalance());
+		str += "-----------------------------------------------------------------------------\n";
+		
+		
 		return str;
 	}
 	
