@@ -20,17 +20,14 @@ public class BankAccount {
 	}
 
 
-
-
-
 	public void deposit(double amount)
 	{
-		this.balance += amount;
+		balance += amount;
 	}
 	
 	public void withdraw(double amount)
 	{
-		this.balance -= amount;
+		balance -= amount;
 	}
 	
 	
@@ -40,7 +37,7 @@ public class BankAccount {
 
 	@Override
 	public String toString() {
-		return String.format("BankAccount [balance=%s, accountNumber=%s, customerName=%s]", 
+		return String.format("BankAccount [balance=%10.2f, accountNumber=%10d, customerName=%15s]", 
 				balance, 
 				accountNumber,
 				customerName);
