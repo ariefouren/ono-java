@@ -7,9 +7,13 @@ public class BankBranchTester {
 		
 		BankAccount alicesAccount = new BankAccount(10000, 1001, "Alice");
 		BankAccount bobsAccount = new BankAccount(1002, "Bob");
+		BankAccount cyndisAccount = new BankAccount(100000, 1003, "Cyndi");
 		
 		branchJerusalem987.addAccount(alicesAccount);
 		branchJerusalem987.addAccount(bobsAccount);
+		branchJerusalem987.addAccount(cyndisAccount);
+		
+		System.out.printf("Total balance: %10.2f\n", branchJerusalem987.totalBalance()); 
 
 	}
 
