@@ -6,7 +6,7 @@ public class BankAccountTester {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BankAccount alicesAccount = new BankAccount(10000, 1001, "Alice");
-		BankAccount bobsAccount = new BankAccount(0, 1002, "Bob");
+		BankAccount bobsAccount = new BankAccount(1002, "Bob");
 		
 		System.out.println("Accounts are created:");
 		System.out.println(alicesAccount.toString());

@@ -14,6 +14,15 @@ public class BankAccount {
 		this.customerName = customerName;
 	}
 	
+	public BankAccount(int accountNumber, String customerName) {
+		this.accountNumber = accountNumber;
+		this.customerName = customerName;
+	}
+
+
+
+
+
 	public void deposit(double amount)
 	{
 		this.balance += amount;
