@@ -20,9 +20,18 @@ public class BankBranch {
 		{
 			total += a.getBalance();
 		}
-		
 		return total;
 		
+	}
+	
+	public String toString()
+	{
+		String str = "";
+		for(BankAccount a: accounts)
+		{
+			str += a.toString() + "\n";
+		}
+		return str;
 	}
 	
 	

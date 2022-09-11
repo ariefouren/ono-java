@@ -13,7 +13,7 @@ public class BankBranchTester {
 		branchJerusalem987.addAccount(bobsAccount);
 		branchJerusalem987.addAccount(cyndisAccount);
 		
-		System.out.printf("Total balance: %10.2f\n", branchJerusalem987.totalBalance()); 
+		System.out.printf("%s", branchJerusalem987.toString()); 
 
 	}
 
