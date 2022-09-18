@@ -15,6 +15,22 @@ public class BankBranchTester {
 		
 		System.out.printf("%s", branchJerusalem987.toString()); 
 		
+		// deposit 700,000 to account "1003"
+		String accNumber = "1003-D";
+		double amount  = 700000;
+		boolean result = branchJerusalem987.deposit(accNumber, amount);
+		if(result == true)
+		{
+			System.out.printf("Deposit successfull\n");
+		}
+		else
+		{
+			System.out.printf("Deposit failed\n");
+		}
+		
+		System.out.printf("%s", branchJerusalem987.toString()); 
+		/*
+		 * 
 		// find account with number "1003"
 		String accNumber = "1009";
 		BankAccount account = branchJerusalem987.findAccount(accNumber);
@@ -26,7 +42,7 @@ public class BankBranchTester {
 		{
 			System.out.printf("Account %s NOT found\n", accNumber);
 		}
-
+		 */
 	}
 
 }
