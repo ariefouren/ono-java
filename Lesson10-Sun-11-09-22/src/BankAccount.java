@@ -4,17 +4,17 @@
 public class BankAccount {
 	// משתנים פרטיים
 	private double balance; 		// יתרה
-	private int accountNumber; 		// מספר חשבון
+	private String accountNumber; 		// מספר חשבון
 	private String customerName; // שם של בעלי החשבון
 	
 	// מתודות ציבוריות
-	public BankAccount(double balance, int accountNumber, String customerName) {
+	public BankAccount(double balance, String accountNumber, String customerName) {
 		this.balance = balance;
 		this.accountNumber = accountNumber;
 		this.customerName = customerName;
 	}
 	
-	public BankAccount(int accountNumber, String customerName) {
+	public BankAccount(String accountNumber, String customerName) {
 		this.accountNumber = accountNumber;
 		this.customerName = customerName;
 	}
@@ -33,6 +33,11 @@ public class BankAccount {
 	
 	public double getBalance() {
 		return balance;
+	}
+
+	
+	public String getAccountNumber() {
+		return accountNumber;
 	}
 
 	@Override
