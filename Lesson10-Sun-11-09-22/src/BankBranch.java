@@ -25,6 +25,20 @@ public class BankBranch {
 		return null;
 	}
 	
+	public boolean deposit(String accountNumber, double amount)
+	{
+		BankAccount account = this.findAccount(accountNumber);
+		if(account != null) // account found
+		{	
+			account.deposit(amount);
+			return true;
+		}
+		else // account not found
+		{
+			return false;
+		}
+	}
+	
 	public double totalBalance() //
 	{
 		double total = 0;
