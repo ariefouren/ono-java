@@ -17,7 +17,7 @@ public class BankBranch {
 	{
 		for(BankAccount a: accounts )
 		{
-			 if(a.getAccountNumber() == accountNumber)
+			 if(a.getAccountNumber().equals( accountNumber) ) 
 			 {
 				 return a;
 			 }
