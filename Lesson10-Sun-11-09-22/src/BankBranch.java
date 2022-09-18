@@ -13,7 +13,7 @@ public class BankBranch {
 		accounts.add(a); 
 	}
 	
-	public double totalBalance()
+	public double totalBalance() //
 	{
 		double total = 0;
 		for(BankAccount a: accounts)
