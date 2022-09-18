@@ -15,8 +15,16 @@ public class BankBranch {
 	
 	public BankAccount findAccount(String accountNumber)
 	{
-		
+		for(BankAccount a: accounts )
+		{
+			 if(a.getAccountNumber() == accountNumber)
+			 {
+				 return a;
+			 }
+		}
+		return null;
 	}
+	
 	public double totalBalance() //
 	{
 		double total = 0;
