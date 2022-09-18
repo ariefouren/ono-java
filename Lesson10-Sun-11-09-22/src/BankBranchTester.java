@@ -16,7 +16,7 @@ public class BankBranchTester {
 		System.out.printf("%s", branchJerusalem987.toString()); 
 		
 		// find account with number "1003"
-		String accNumber = "1003";
+		String accNumber = "1009";
 		BankAccount account = branchJerusalem987.findAccount(accNumber);
 		if(account != null)
 		{
@@ -24,7 +24,7 @@ public class BankBranchTester {
 		}
 		else
 		{
-			System.out.printf("Account %s NOT found\n", accNumber, account.toString());
+			System.out.printf("Account %s NOT found\n", accNumber);
 		}
 
 	}
