@@ -26,6 +26,20 @@ public class BankBranch {
 		return null;
 	}
 	
+	public boolean withdraw(String accountNumber, double amount)
+	{
+		BankAccount a = findAccount(accountNumber);
+		if(a != null)
+		{
+			 return a.withdraw(amount);  
+		}
+		else // a == null - account not found
+		{
+			return false;
+		}
+	
+	}
+	
 	public double totalBalance()
 	{
 		double total  = 0;
