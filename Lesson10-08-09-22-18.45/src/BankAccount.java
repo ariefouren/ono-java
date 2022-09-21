@@ -54,7 +54,7 @@ public class BankAccount {
 
 	@Override
 	public String toString() {
-		return String.format("BankAccount [balance=%12.2f, accountNumber=%7d, customerName=%10s]", 
+		return String.format("BankAccount [balance=%12.2f, accountNumber=%7s, customerName=%10s]", 
 				balance, 
 				accountNumber,
 				customerName);
