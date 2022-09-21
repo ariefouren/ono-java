@@ -1,28 +1,41 @@
+/*
+ * BankAccount.java
+ * TIGBUR 21-09-22
+ */
 public class BankAccount {
 	private double balance; // יתרה
-	private int accountNumber; // מספר חשבון
+	private String accountNumber; // מספר חשבון
 	private String customerName; // שם של בעלי החשבון
 	
-	public BankAccount(double balance, int accountNumber, String customerName) {
+	public BankAccount(double balance, String accountNumber, String customerName) {
 		this.balance = balance;
 		this.accountNumber = accountNumber;
 		this.customerName = customerName;
 	}
 
-	public BankAccount(int accountNumber, String customerName) {
+	public BankAccount(String accountNumber, String customerName) {
 		this.balance = 0;  // default
 		this.accountNumber = accountNumber;
 		this.customerName = customerName;
 	}
 
-	public void deposit(double amount)
+	public boolean deposit(double amount)
 	{
 		balance = balance + amount;
+		return true;
 	}
 
-	public void withdraw(double amount)
+	public boolean withdraw(double amount)
 	{
-		balance = balance - amount;
+		if(balance - amount >= 0)
+		{
+			balance -= amount;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	
@@ -31,7 +44,7 @@ public class BankAccount {
 		return balance;
 	}
 
-	public int getAccountNumber() {
+	public String getAccountNumber() {
 		return accountNumber;
 	}
 
