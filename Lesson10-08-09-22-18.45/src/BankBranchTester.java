@@ -22,6 +22,10 @@ public class BankBranchTester {
 		branchTA987.withdraw("1023", 7000);
 		System.out.print(branchTA987.toString());
 		
+		System.out.printf("Trnsfer 4000 NIS from account 1023 to account 1024\n");
+		branchTA987.transfer("1023","1024",  4000);
+		System.out.print(branchTA987.toString());
+		
 	}
 
 }

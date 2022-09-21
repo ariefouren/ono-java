@@ -40,6 +40,21 @@ public class BankBranch {
 	
 	}
 	
+	public boolean transfer(String fromAccountNumber, String toAccountNumber, double amount)
+	{
+		BankAccount from = findAccount(fromAccountNumber);
+		BankAccount to = findAccount(toAccountNumber);
+		if(from != null && to != null)
+		{
+			if(from.withdraw(amount))
+			{
+				// deposit to second account
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public double totalBalance()
 	{
 		double total  = 0;
@@ -60,10 +75,15 @@ public class BankBranch {
 		str += branchName + "\n";
 		str += "-----------------------------------------------------------------------------------\n";
 		
+		
+		
 		for(BankAccount a: accounts)
 		{
 			str  += a.toString() + "\n";
 		}
+		
+		
+		
 		str += "-----------------------------------------------------------------------------------\n";
 		str += String.format("Number of accounts : %d\n", accounts.size());
 		str += String.format("Total balance : %10.2f\n", totalBalance());
