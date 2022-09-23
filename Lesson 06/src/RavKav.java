@@ -27,6 +27,25 @@ public class RavKav {
 			return false;
 		}
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("RavKav [id=%s, balance=%s, bonusRate=%s]", id, balance, bonusRate);
+	}
+
+	
+	
+
+	
+	
 	
 	
 
