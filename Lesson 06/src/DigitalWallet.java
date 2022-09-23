@@ -10,5 +10,15 @@ public class DigitalWallet {
 		cards.add(card);
 	}
 	
+	public RavKav find(int id)
+	{
+		for(RavKav r : cards)
+		{
+			if(r.getId() == id) return r; 
+		}
+		
+		return null;
+
+	}
 	
 }
