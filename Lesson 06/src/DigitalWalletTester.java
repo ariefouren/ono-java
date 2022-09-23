@@ -14,7 +14,7 @@ public class DigitalWalletTester {
 		System.out.println(myDigitalWallet.toString()+ "\n\n");
 		
 		System.out.println("Try to charge each card by 100 NIS.");
-		myDigitalWallet.charge(123, 100);
+		myDigitalWallet.charge(123, 100.0);
 		myDigitalWallet.charge(456, 100);
 		myDigitalWallet.charge(-1, 100);
 		System.out.println(myDigitalWallet.toString()+ "\n\n");
