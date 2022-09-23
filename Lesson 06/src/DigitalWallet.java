@@ -80,6 +80,7 @@ public class DigitalWallet {
 		{
 			str += r.toString() +"\n";
 		}
+		
 		str += "-------------------------\n";
 		str += String.format("Total balance : %7.2f\n", getTotalBalance());
 		return str;

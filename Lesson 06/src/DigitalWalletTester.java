@@ -19,7 +19,7 @@ public class DigitalWalletTester {
 		myDigitalWallet.charge(-1, 100);
 		System.out.println(myDigitalWallet.toString()+ "\n\n");
 		
-		myDigitalWallet.pay(123, 5);
+		myDigitalWallet.pay(123, 5.0);
 		System.out.println("5 NIS is paid by card 123");
 		System.out.println(myDigitalWallet.toString()+ "\n\n");
 		
@@ -27,7 +27,7 @@ public class DigitalWalletTester {
 		myDigitalWallet.pay(123, 500);
 		
 		System.out.println("Try to pay 5 NIS by not existing card -1:");
-		myDigitalWallet.pay(-1, 5);
+		myDigitalWallet.pay(-1, 5.0);
 		System.out.println(myDigitalWallet.toString()+ "\n\n");
 		
 		
