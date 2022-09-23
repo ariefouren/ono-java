@@ -1,9 +1,29 @@
 
 public class RavKav {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	private int id;
+	private double balance;
+	private double bonusRate;
+	
+	public RavKav(int id, double bonusRate) {
+		this.id = id;
+		this.bonusRate = bonusRate;
+		this.balance = 0;
 	}
+	
+	
+	
 
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
 }
