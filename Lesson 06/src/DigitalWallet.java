@@ -71,5 +71,18 @@ public class DigitalWallet {
 		return total;
 	}
 	
+	public String toString()
+	{
+		String str = "";
+		str += "Digital Wallet \n";
+
+		for(RavKav r : cards)
+		{
+			str += r.toString() +"\n";
+		}
+		str += "-------------------------\n";
+		str += String.format("Total balance : %7.2f\n", getTotalBalance());
+		return str;
+	}
 	
 }
