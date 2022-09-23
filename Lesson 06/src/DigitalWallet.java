@@ -21,4 +21,20 @@ public class DigitalWallet {
 
 	}
 	
+	public boolean charge(int id, double amount)
+	{
+		RavKav r = find(id);
+		if( r != null )
+		{
+			r.charge(amount);
+			return true;
+		}
+		else
+		{
+			System.out.printf("Error: card %d not found", id);
+			return false;
+		}
+		
+	}
+	
 }
