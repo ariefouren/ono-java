@@ -10,6 +10,23 @@ public class RavKav {
 		this.balance = 0;
 	}
 	
+	public void charge(double amount)
+	{
+		balance += amount * (1 + bonusRate);
+	}
+	
+	public boolean pay(double amount)
+	{
+		if(balance >= amount)
+		{
+			balance -= amount;
+			return true;
+		}
+		else // balance < amount
+		{
+			return false;
+		}
+	}
 	
 	
 
