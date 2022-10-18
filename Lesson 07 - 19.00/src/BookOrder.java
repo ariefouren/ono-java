@@ -17,11 +17,13 @@ public class BookOrder {
 	
 	public double getSubTotal()
 	{
+		
 		double totalPrice =0;
 		for(Book x: books)
 		{
 			totalPrice += x.getPrice();
 		}
+		
 		return totalPrice;
 	}
 	
@@ -47,9 +49,9 @@ public class BookOrder {
 		}
 		str += "--------------------------------------\n";
 		
-		str += String.format("Sub-Total      : %9.2f:\n", getSubTotal()) + "\n";
-		str += String.format("Shipping Cost  : %9.2f:\n", getShippingCost()) + "\n";
-		str += String.format("Grand Total    : %9.2f:\n", getGrandTotal()) + "\n";
+		str += String.format("Sub-Total      : %9.2f:\n", getSubTotal());
+		str += String.format("Shipping Cost  : %9.2f:\n", getShippingCost());
+		str += String.format("Grand Total    : %9.2f:\n", getGrandTotal());
 		
 		return str;
 	}

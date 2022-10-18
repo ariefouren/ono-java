@@ -28,7 +28,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return String.format("Book [title=%20s,"
+		return String.format("Book [title=%30s,"
 				+ " author=%20s, "
 				+ "numPages=%4d, "
 				+ "price=%7.2f]", title, author, numPages,
