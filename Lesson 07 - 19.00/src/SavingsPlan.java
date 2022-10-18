@@ -29,6 +29,7 @@ public class SavingsPlan {
 	{
 		fv[i] = fv[i-1] * (1 + rate) + pmt;
 	}
+	
 	// output
 	System.out.printf("The future value after %d years:  %7.2f\n",
 		nper/12, fv1);
@@ -37,6 +38,11 @@ public class SavingsPlan {
 	System.out.printf("The total interest earned:        %7.2f\n",
 			interestEarned);
 	
+	System.out.printf("%10s | %10s\n", "year", "future value"); 
+	for(int year = 1; year <= nper/12; year++)
+	{
+		System.out.printf("%10d | %10.2f\n", year, fv[year * 12]);
+	}
 	
 
 	}
