@@ -13,15 +13,24 @@ public class SavingsPlan {
 	double rate  = input.nextDouble()/12/100; // r = monthly rate, 0.005	
 	
 	System.out.printf("Please enter the number of years: ");
-	int nper  = input.nextInt() * 12;
+	int nper  = input.nextInt() * 12; // nper = number of months
 	
 	// computations
 	double fv = pmt * (Math.pow((1 + rate), nper) - 1)/rate; 
 	// fv = pmt * ((1 + rate)^n - 1)/rate
 	
+	double totalPMT =  nper * pmt;
+	
+	double interestEarned = fv - totalPMT; 
+	
 	// output
-	System.out.printf("The future value after %d years: %7.2f\n",
+	System.out.printf("The future value after %d years:  %7.2f\n",
 		nper/12, fv);
+	System.out.printf("The total amount of payments :    %7.2f\n",
+			totalPMT);
+	System.out.printf("The total interest earned:        %7.2f\n",
+			interestEarned);
+	
 	
 
 	}
