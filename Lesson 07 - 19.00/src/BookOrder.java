@@ -25,6 +25,35 @@ public class BookOrder {
 		return totalPrice;
 	}
 	
+	public double getShippingCost()
+	{
+		return books.size() * 15.0;
+	}
+	
+	public double getGrandTotal()
+	{
+		return getSubTotal() + getShippingCost();
+	}
+	
+	public String toString()
+	{
+		String str = "";
+		str += String.format("Order: %d  Date: %s", orderNumber, date) + "\n";
+		str += "--------------------------------------\n";
+		
+		for(Book x: books)
+		{
+			str += x.toString() + "\n";
+		}
+		str += "--------------------------------------\n";
+		
+		str += String.format("Sub-Total      : %9.2f:\n", getSubTotal()) + "\n";
+		str += String.format("Shipping Cost  : %9.2f:\n", getShippingCost()) + "\n";
+		str += String.format("Grand Total    : %9.2f:\n", getGrandTotal()) + "\n";
+		
+		return str;
+	}
+	
 	
 	
 	
